@@ -23,7 +23,7 @@ rm -f $PREFIX/bin/start-desktop
 echo "[+] Removing packages..."
 # Note: i didn't add firefox and termux-x11-nightly cause i need them (:
 pkg uninstall geany openbox alacritty feh jp2a xcompmgr pcmanfm tint2 xwayland -y
-pkg autoremove -y
+apt autoremove -y
 
 # -- DELETE CONFIGURATIONS --
 echo "[+] Deleting config directories..."
@@ -33,4 +33,4 @@ rm -rf ~/.config/tint2
 rm -rf ~/.icons/default
 rm -rf ~/.icons/WinSur-white-cursors
 
-echo -e "${RED}[+] Noir-X11 has been purged.${NC}"
+echo -e "${RED}[+] termux-openbox environment removed.${NC}"
