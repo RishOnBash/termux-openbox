@@ -2,19 +2,16 @@
 A high-performance, minimalist desktop environment for Termux using Openbox and Termux-X11.
 
 ## ⚡ Features
-Window Manager: Openbox
-
-Terminal: Alacritty
-
-Taskbar: Tint2
-
-Engine: Termux-X11 + XWayland
-
-Customization: WinSur White Cursors & Prismatic-Night theme included.
+- Window Manager: Openbox
+- Terminal: Alacritty
+- Taskbar: Tint2
+- Engine: Termux-X11 + XWayland
+- Customization: WinSur White Cursors & Prismatic-Night theme included.
 
 ## 🛠️ Installation
 
 1. **Prerequisites**
+
 Ensure you have the Termux-X11 app installed on your Android device.
 
 2. **Clone and Setup**
