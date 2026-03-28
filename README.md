@@ -1,6 +1,8 @@
 # 🌌 termux-openbox
 A high-performance, minimalist desktop environment for Termux using Openbox and Termux-X11.
 
+#### Chances of it working is variable may work on your device or maybe not at all :/
+
 ## ⚡ Features
 - Window Manager: Openbox
 - Terminal: Alacritty
