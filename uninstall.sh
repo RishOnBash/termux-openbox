@@ -22,7 +22,7 @@ rm -f $PREFIX/bin/start-desktop
 # -- REMOVE PACKAGES --
 echo "[+] Removing packages..."
 # Note: i didn't add firefox and termux-x11-nightly cause i need them (:
-pkg uninstall geany openbox alacritty feh jp2a xcompmgr pcmanfm tint2 xwayland -y
+pkg uninstall ranger openbox alacritty feh jp2a xcompmgr tint2 xwayland -y
 apt autoremove -y
 
 # -- DELETE CONFIGURATIONS --
