@@ -48,6 +48,53 @@ sed -i "s|<name>.*</name>|<name>Prismatic-Night</name>|g" ~/.config/openbox/rc.x
 tint2 &
 EOF
 
+# -- MENU CONFIG --
+cat <<EOF > ~/.config/openbox/menu.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+    <menu id="root-menu" label="Openbox 3">
+        
+        <item label="Terminal (Alacritty)">
+            <action name="Execute">
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 alacritty</command>
+            </action>
+        </item>
+
+        <item label="Web Browser (Firefox)">
+            <action name="Execute">
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 firefox</command>
+            </action>
+        </item>
+
+        <item label="File Manager (PCManFM)">
+            <action name="Execute">
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 pcmanfm</command>
+            </action>
+        </item>
+
+        <item label="Code Editor (Geany)">
+            <action name="Execute">
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 geany</command>
+            </action>
+        </item>
+
+        <separator />
+
+        <item label="Reconfigure Openbox">
+            <action name="Reconfigure" />
+        </item>
+
+        <item label="Exit">
+            <action name="Exit" />
+        </item>
+
+    </menu>
+</openbox_menu>
+EOF
+
+# Apply changes immediately
+openbox --reconfigure
+
 # -- START-DESKTOP --
 cat <<EOF > "$PREFIX/bin/start-openbox"
 #!/usr/bin/env bash
