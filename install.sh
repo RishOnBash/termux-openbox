@@ -10,7 +10,7 @@ echo -e "${BLUE}[+] Starting Setup...${NC}"
 # -- INSTALL ESSENTIAL PACKAGES --
 pkg update -y
 pkg install x11-repo -y
-pkg install geany openbox alacritty feh jp2a xcompmgr firefox pcmanfm tint2 xwayland termux-x11-nightly -y
+pkg install vim ranger python openbox alacritty feh jp2a xcompmgr firefox tint2 xwayland termux-x11-nightly -y
 
 # -- LOCAL CURSOR SETUP --
 echo -e "${BLUE}[+] Installing cursors from local assets...${NC}"
@@ -43,7 +43,7 @@ EOF
 # -- AUTOSTART --
 cat <<EOF > ~/.config/openbox/autostart
 xcompmgr -c &
-feh --bg-fill ./assets/wallpapers/blue-scan.jpg &
+feh --bg-fill $HOME/termux-openbox/assets/wallpapers/blue-scan.jpg &
 sed -i "s|<name>.*</name>|<name>Prismatic-Night</name>|g" ~/.config/openbox/rc.xml
 tint2 &
 EOF
@@ -66,15 +66,15 @@ cat <<EOF > ~/.config/openbox/menu.xml
             </action>
         </item>
 
-        <item label="File Manager (PCManFM)">
+        <item label="File Manager">
             <action name="Execute">
-                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 pcmanfm</command>
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 alacritty -e ranger</command>
             </action>
         </item>
 
-        <item label="Code Editor (Geany)">
+        <item label="Vim">
             <action name="Execute">
-                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 geany</command>
+                <command>env DISPLAY=:0 LIBGL_ALWAYS_SOFTWARE=1 alacritty -e vim</command>
             </action>
         </item>
 
@@ -114,7 +114,7 @@ export LIBGL_ALWAYS_SOFTWARE=1
 # Launch
 openbox-session &
 sleep 1
-alacritty &
+alacritty &     # remove this if u dont want alacritty to open on start
 EOF
 
 chmod +x $PREFIX/bin/start-openbox
