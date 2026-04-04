@@ -32,7 +32,7 @@ Now, open Termux-X11
 
 | Alacritty | Vim | Ranger and Firefox |
 | :---: | :---: | :---: |
-| ![Alacritty](assets/screenshots/alacritty.jpg) | ![Vim](assets/screenshots/vim.jpg) | ![Window](assets/screenshots/multi-window.jpg) |
+| ![Alacritty](assets/screenshots/alacritty.jpg) | ![Vim](assets/screenshots/vim.jpg) | ![Window](assets/screenshots/multi-win.jpg) |
 
 ## 🗑 Uninstallation
 
