@@ -7,6 +7,7 @@ A high-performance, minimalist desktop environment for Termux using Openbox and 
 - Window Manager: Openbox
 - Terminal: Alacritty
 - Taskbar: Tint2
+- File Manager: Ranger
 - Engine: Termux-X11 + XWayland
 - Customization: WinSur White Cursors & Prismatic-Night theme included.
 
@@ -26,6 +27,12 @@ chmod +x install.sh && ./install.sh
 3. **Usage**
 In Termux, run the start command: `start-openbox`
 Now, open Termux-X11
+
+## 📸 Visual Overview
+
+| Alacritty | Vim | Ranger and Firefox |
+| :---: | :---: | :---: |
+| ![Alacritty](assets/screenshots/alacritty.jpg) | ![Vim](assets/screenshots/vim.jpg) | ![Window](assets/screenshots/multi-window.jpg) |
 
 ## 🗑 Uninstallation
 
