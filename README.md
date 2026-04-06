@@ -25,6 +25,7 @@ cd termux-openbox
 chmod +x install.sh && ./install.sh
 ```
 3. **Usage**
+
 In Termux, run the start command: `start-openbox`
 Now, open Termux-X11
 
